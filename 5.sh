@@ -73,7 +73,12 @@ yay -S --noconfirm \
     python3.6+ \
     python-mpv \
     python-mpd2 \
-    musicbrainzngs
+    musicbrainzngs \
+    xdg-user-dirs \
+    xdg-user-dirs-gtk \
+    xdg-ninja \
+    gum \
+    figglet \
 
 # Import additional code
 for i in {001..100}; do
