@@ -2,7 +2,7 @@
 
 # Install system dependencies
 yay -S --noconfirm gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus
-yay -S --confirm hyprland
+yay -S --confirm hyprland-git
 
 # Define loading icon function
 function loading_icon() {
@@ -19,7 +19,7 @@ function loading_icon() {
     while [ "${load_interval}" -ne "${elapsed}" ]; do
         for frame in "${loading_animation[@]}" ; do
             printf "%s\b" "${frame}"
-            sleep 0.25
+            sleep 5.25
         done
         elapsed=$(( elapsed + 1 ))
     done
@@ -77,7 +77,7 @@ yay -S --noconfirm \
 
 # Import additional code
 for i in {001..100}; do
-    sleep 1
+    sleep 150
     printf "\r $i =>25%   ==>50%   ===>75%        ===>100%"
 done
 
